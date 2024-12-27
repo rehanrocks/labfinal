@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tour Management System</h1>
+
+        <!-- Add Attraction -->
+        <section>
+            <h2>Add Attraction</h2>
+            <form id="addAttractionForm">
+                <input type="text" id="attractionName" placeholder="Attraction Name" required />
+                <input type="text" id="attractionLocation" placeholder="Location" required />
+                <input type="number" id="attractionFee" placeholder="Entry Fee" min="0" required />
+                <button type="submit">Add Attraction</button>
+            </form>
+        </section>
+
+        <!-- Add Visitor -->
+        <section>
+            <h2>Add Visitor</h2>
+            <form id="addVisitorForm">
+                <input type="text" id="visitorName" placeholder="Visitor Name" required />
+                <input type="email" id="visitorEmail" placeholder="Email" required />
+                <button type="submit">Add Visitor</button>
+            </form>
+        </section>
+
+        <!-- View Attractions -->
+        <section>
+            <h2>View Attractions</h2>
+            <button id="viewAttractionsBtn">View All Attractions</button>
+            <ul id="attractionsList"></ul>
+        </section>
+
+        <!-- View Top-Rated Attractions -->
+        <section>
+            <h2>Top-Rated Attractions</h2>
+            <button id="viewTopAttractionsBtn">View Top-Rated Attractions</button>
+            <ul id="topAttractionsList"></ul>
+        </section>
+
+        <!-- Post Review -->
+        <section>
+            <h2>Post Review</h2>
+            <form id="postReviewForm">
+                <input type="text" id="reviewAttractionId" placeholder="Attraction ID" required />
+                <input type="text" id="reviewVisitorId" placeholder="Visitor ID" required />
+                <input type="number" id="reviewScore" placeholder="Score (1-5)" min="1" max="5" required />
+                <textarea id="reviewComment" placeholder="Comment"></textarea>
+                <button type="submit">Post Review</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
